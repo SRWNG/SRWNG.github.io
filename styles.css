@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+   /* background-image: url('https://i.imgur.com/x499Hxt.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.logo h1 {
+    margin: 0;
+}
+
+.menu-icon {
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.menu-icon.active {
+    transform: rotate(180deg);
+}
+
+.menu-icon div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: background-color 0.3s ease;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #444;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    width: 200px;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    margin: 15px 0;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.menu ul li a:hover {
+    color: #ddd;
+}
+
+.main-content {
+    padding: 80px 20px; /* Adjusted padding for positioning */
+    text-align: center;
+    opacity: 0; /* Start hidden for fade-in effect */
+    animation: fadeIn 2s ease-out forwards; /* Apply fade-in animation */
+}
+
+/* Keyframes for the fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Optional: Add slight upward movement */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* End at original position */
+    }
+}
+
+.main-content h2 {
+    font-size: 60px;
+    color: #333;
+    font-weight: 750;
+    margin: 0;
+}
+
+.main-content h3 {
+    font-size: 24px;
+    color: #555;
+    margin: 5px 0 0; /* Adjust spacing if needed */
+}
