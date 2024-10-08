@@ -2,10 +2,38 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-   /* background-image: url('https://i.imgur.com/x499Hxt.jpeg');
+    background-image: url('./assets/26669.jpg');
+    background-size:auto;
+    background-position: center;
+    /* background-repeat:unset; */
+    
+    
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./assets/26669.jpg'); /* Make sure the image is in the correct path */
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat; */
+    filter: blur(20px); /* Increase the blur effect, 20px is strong */
+    z-index: -1; /* Makes sure the blurred image is behind the content */
+    opacity: 0.7; /* Adjust opacity if needed */
+}
+
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white overlay */
+    z-index: -1; /* Ensures it's above the blurred background but behind the content */
 }
 
 header {
@@ -17,6 +45,16 @@ header {
     align-items: center;
     position: relative;
 }
+
+.logo a {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Inherits the color from the parent element */
+}
+
+.logo a:hover {
+    color: inherit; /* Keeps the color unchanged on hover */
+}
+
 
 .logo h1 {
     margin: 0;
@@ -87,14 +125,14 @@ header {
     padding: 80px 20px; /* Adjusted padding for positioning */
     text-align: center;
     opacity: 0; /* Start hidden for fade-in effect */
-    animation: fadeIn 2s ease-out forwards; /* Apply fade-in animation */
+    animation: fadeIn 0.75s ease-out forwards; /* Apply fade-in animation */
 }
 
 /* Keyframes for the fade-in effect */
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(20px); /* Optional: Add slight upward movement */
+        transform: translateY(10px); /* Optional: Add slight upward movement */
     }
     to {
         opacity: 1;
@@ -113,4 +151,26 @@ header {
     font-size: 24px;
     color: #555;
     margin: 5px 0 0; /* Adjust spacing if needed */
+}
+
+.explore-songs {
+    background-color: #333;
+    border: none;
+    color: white;
+    padding: 20px 20px;
+    border-radius: 5px;
+    position: relative;
+    font-size: 2em;
+    cursor: pointer;
+    
+
+}
+
+.explore-songs:hover {
+    background-color: #444;
+}
+
+.seperator {
+    height: 200px;
+    padding: 10px;
 }
