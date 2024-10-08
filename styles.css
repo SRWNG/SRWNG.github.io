@@ -3,37 +3,34 @@ body {
     margin: 0;
     padding: 0;
     background-image: url('./assets/26669.jpg');
-    background-size:auto;
+    background-size: auto;
     background-position: center;
-    /* background-repeat:unset; */
-    
-    
 }
 
 body::before {
     content: '';
-    position: absolute;
+    position: fixed; /* Use fixed instead of absolute */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('./assets/26669.jpg'); /* Make sure the image is in the correct path */
+    background-image: url('./assets/26669.jpg'); /* Ensure the correct path */
     background-size: cover;
     background-position: center;
-    filter: blur(20px); /* Increase the blur effect, 20px is strong */
-    z-index: -1; /* Makes sure the blurred image is behind the content */
+    filter: blur(20px); /* Blur effect */
+    z-index: -1; /* Behind the content */
     opacity: 0.7; /* Adjust opacity if needed */
 }
 
 body::after {
     content: '';
-    position: absolute;
+    position: fixed; /* Use fixed to cover the page on scroll */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white overlay */
-    z-index: -1; /* Ensures it's above the blurred background but behind the content */
+    z-index: -1; /* Above the background blur but behind content */
 }
 
 header {
@@ -282,4 +279,34 @@ button:hover {
 
 .mainsong {
     text-align: center;
+}
+
+.album-cover {
+    text-align: center; /* Center the album cover */
+    margin-bottom: 20px; /* Space between album cover and text */
+}
+
+.album-cover img {
+    width: 300px; /* Set the width of the album cover */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow for depth */
+}
+
+.track-list a {
+    text-decoration: none; /* Removes the underline */
+    color: inherit; /* Inherits the color from the parent element */
+}
+
+.track-list a:hover {
+    color: inherit; /* Keeps the color unchanged on hover */
+}
+
+h3 a {
+    text-decoration: none; /* Removes the underline */
+    color: inherit; /* Inherits the color from the parent element */
+}
+
+h3 a:hover {
+    color: inherit; /* Keeps the color unchanged on hover */
 }
