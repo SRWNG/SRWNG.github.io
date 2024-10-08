@@ -121,11 +121,64 @@ header {
     color: #ddd;
 }
 
+/* Main content styles for individual song pages */
 .main-content {
-    padding: 80px 20px; /* Adjusted padding for positioning */
+    padding: 80px 20px; /* Adjust padding for positioning */
     text-align: center;
     opacity: 0; /* Start hidden for fade-in effect */
     animation: fadeIn 0.75s ease-out forwards; /* Apply fade-in animation */
+}
+
+/* Specific styles for song details */
+.main-content h2 {
+    font-size: 48px; /* Size for song title */
+    color: #333;
+    font-weight: 750;
+    margin: 20px 0; /* Adjust margin for spacing */
+}
+
+.main-content h3 {
+    font-size: 24px; /* Size for artist name */
+    color: #555;
+    margin: 10px 0; /* Adjust margin for spacing */
+}
+
+.main-content h4 {
+    font-size: 20px; /* Size for "Chords Used" heading */
+    color: #444;
+    margin: 15px 0; /* Adjust margin for spacing */
+}
+
+.main-content ul {
+    list-style-type: none; /* Remove bullet points from list */
+    padding: 0; /* Remove padding */
+    color: #666; /* Color for chord list */
+    font-size: 18px; /* Font size for chords */
+}
+
+.main-content pre {
+    background-color: #f8f8f8; /* Light gray background for tabs */
+    border: 1px solid #e0e0e0; /* Light border around tabs */
+    padding: 10px; /* Padding inside the pre tag */
+    border-radius: 5px; /* Rounded corners */
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+    white-space: pre-wrap; /* Ensure text wraps within the block */
+}
+
+button {
+    background-color: #333; /* Button background color */
+    color: white; /* Button text color */
+    padding: 10px 20px; /* Button padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+    font-size: 16px; /* Font size for button */
+    transition: background-color 0.3s ease; /* Smooth background color change */
+    margin-top: 20px; /* Space above the button */
+}
+
+button:hover {
+    background-color: #444; /* Darker background on hover */
 }
 
 /* Keyframes for the fade-in effect */
@@ -140,18 +193,6 @@ header {
     }
 }
 
-.main-content h2 {
-    font-size: 60px;
-    color: #333;
-    font-weight: 750;
-    margin: 0;
-}
-
-.main-content h3 {
-    font-size: 24px;
-    color: #555;
-    margin: 5px 0 0; /* Adjust spacing if needed */
-}
 
 .explore-songs {
     background-color: #333;
@@ -173,4 +214,72 @@ header {
 .seperator {
     height: 200px;
     padding: 10px;
+}
+
+/* Main content styles */
+.main-content {
+    padding: 20px;
+}
+
+/* Song gallery styling */
+.song-gallery {
+    display: grid; /* Use CSS Grid layout */
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px; /* Space between each song block */
+    margin-top: 20px;
+}
+
+/* Song card styling */
+.song-card {
+    background-color: white; /* White background for each card */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    border: 1px solid #e0e0e0; /* Optional: adds a light border */
+}
+
+.song-card h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.song-card p {
+    margin: 5px 0;
+    color: #666;
+    font-size: 16px;
+}
+
+.song-card a {
+    text-decoration: none;
+    color: #008cba; /* Link color for chords */
+    font-weight: bold;
+}
+
+.song-card a:hover {
+    color: #005f73; /* Link hover color */
+}
+
+.song-card:hover {
+    transform: scale(1.05); /* Hover effect on song block */
+}
+
+/* Responsive styles */
+@media (max-width: 800px) {
+    .song-gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+}
+
+@media (max-width: 500px) {
+    .song-gallery {
+        grid-template-columns: 1fr; /* 1 column on small screens */
+    }
+}
+
+.mainsong {
+    text-align: center;
 }
