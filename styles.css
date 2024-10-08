@@ -278,8 +278,13 @@ button:hover {
 }
 
 .mainsong {
-    text-align: center;
+    text-align: left;
+    width: 50vw;
+    position: absolute; /* Add this line */
+    left: 50%;
+    transform: translateX(-50%); /* Shift element by half of its width */
 }
+
 
 .album-cover {
     text-align: center; /* Center the album cover */
