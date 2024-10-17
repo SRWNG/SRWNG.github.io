@@ -229,13 +229,22 @@ button:hover {
 }
 
 .mainsong {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    backdrop-filter: blur(10px); /* Frosted glass blur effect */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside the element */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Optional: light border for better visibility */
     text-align: left;
     width: 50vw;
-    position: absolute; /* Add this line */
+    position: absolute;
     left: 50%;
-    transform: translateX(-50%); /* Shift element by half of its width */
+    transform: translateX(-50%);
     font-family: Arial, sans-serif;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: adds depth with a shadow */
+    font-weight: 400;
+    font-size: large;
 }
+
 
 .album-cover {
     text-align: center; /* Center the album cover */
