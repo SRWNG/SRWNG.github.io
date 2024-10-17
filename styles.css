@@ -283,6 +283,7 @@ button:hover {
     position: absolute; /* Add this line */
     left: 50%;
     transform: translateX(-50%); /* Shift element by half of its width */
+    font-family: Arial, sans-serif;
 }
 
 
