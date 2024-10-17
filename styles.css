@@ -52,70 +52,24 @@ header {
     color: inherit; /* Keeps the color unchanged on hover */
 }
 
-
 .logo h1 {
     margin: 0;
 }
 
-.menu-icon {
-    display: inline-block;
-    cursor: pointer;
-    transition: transform 0.3s ease;
+.menu-icons {
+    display: flex;
+    gap: 15px; /* Space between icons */
 }
 
-.menu-icon.active {
-    transform: rotate(180deg);
+.icon {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Icon color */
+    font-size: 24px; /* Size of icons */
+    transition: color 0.3s; /* Smooth color change */
 }
 
-.menu-icon div {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 5px 0;
-    transition: background-color 0.3s ease;
-}
-
-.menu {
-    display: none;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background-color: #444;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 20px;
-    width: 200px;
-    opacity: 0;
-    transition: opacity 0.5s ease, transform 0.5s ease;
-    transform: translateY(-10px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.menu.show {
-    display: block;
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.menu ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.menu ul li {
-    margin: 15px 0;
-}
-
-.menu ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    transition: color 0.3s ease;
-}
-
-.menu ul li a:hover {
-    color: #ddd;
+.icon:hover {
+    color: #007BFF; /* Change color on hover */
 }
 
 /* Main content styles for individual song pages */
@@ -190,7 +144,6 @@ button:hover {
     }
 }
 
-
 .explore-songs {
     background-color: #333;
     border: none;
@@ -200,15 +153,13 @@ button:hover {
     position: relative;
     font-size: 2em;
     cursor: pointer;
-    
-
 }
 
 .explore-songs:hover {
     background-color: #444;
 }
 
-.seperator {
+.separator {
     height: 200px;
     padding: 10px;
 }
@@ -285,7 +236,6 @@ button:hover {
     transform: translateX(-50%); /* Shift element by half of its width */
     font-family: Arial, sans-serif;
 }
-
 
 .album-cover {
     text-align: center; /* Center the album cover */
