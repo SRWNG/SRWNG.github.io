@@ -239,10 +239,10 @@ button:hover {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    font-family: Arial, sans-serif;
+    font-family: Consolas, monospace;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: adds depth with a shadow */
     font-weight: 400;
-    font-size: large;
+    font-size: medium;
 }
 
 
